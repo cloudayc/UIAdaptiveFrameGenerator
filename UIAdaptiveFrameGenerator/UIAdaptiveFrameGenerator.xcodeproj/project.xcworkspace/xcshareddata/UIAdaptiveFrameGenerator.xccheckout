@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FC8CED1A-9B7D-4DA8-8A22-F4C3C66793E5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UIAdaptiveFrameGenerator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B695C01A-4F77-4DF7-BB48-B8613FD9715A</key>
+		<string>ssh://github.com/cloudayc/UIAdaptiveFrameGenerator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>UIAdaptiveFrameGenerator/UIAdaptiveFrameGenerator.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B695C01A-4F77-4DF7-BB48-B8613FD9715A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/cloudayc/UIAdaptiveFrameGenerator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B695C01A-4F77-4DF7-BB48-B8613FD9715A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B695C01A-4F77-4DF7-BB48-B8613FD9715A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UIAdaptiveFrameGenerator</string>
+		</dict>
+	</array>
+</dict>
+</plist>
