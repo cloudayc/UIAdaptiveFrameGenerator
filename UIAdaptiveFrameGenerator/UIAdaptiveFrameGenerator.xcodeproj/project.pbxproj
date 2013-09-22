@@ -73,6 +73,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		294D42F217EEE10B007DDCB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7798DDC017EBF99100CAA00B = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +126,7 @@
 				7798DDDF17EBF99100CAA00B /* AppDelegate.m */,
 				7798DDE117EBF99100CAA00B /* MainMenu.xib */,
 				7798DDE417EBF99100CAA00B /* Images.xcassets */,
+				294D42F217EEE10B007DDCB5 /* Model */,
 				7798DDD317EBF99100CAA00B /* Supporting Files */,
 			);
 			path = UIAdaptiveFrameGenerator;
@@ -464,6 +472,7 @@
 				7798DDFC17EBF99100CAA00B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7798DDFD17EBF99100CAA00B /* Build configuration list for PBXNativeTarget "UIAdaptiveFrameGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +481,7 @@
 				7798DDFF17EBF99100CAA00B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
