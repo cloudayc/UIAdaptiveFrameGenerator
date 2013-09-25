@@ -647,22 +647,25 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="UIAdaptiveFrameGenerator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
+        <window title="UIAdaptiveFrameGenerator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371" customClass="AdapterWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="779" height="454"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="779" height="454"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6NX-qZ-3DH">
-                        <rect key="frame" x="20" y="400" width="66" height="19"/>
+                        <rect key="frame" x="57" y="401" width="66" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="roundRect" title="add view" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KZ7-rV-aSL">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="cellTitle"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="addAdaptiveRootView:" target="371" id="xQS-av-pm6"/>
+                        </connections>
                     </button>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XDZ-fN-zPn">
                         <rect key="frame" x="5" y="341" width="64" height="22"/>
@@ -702,14 +705,14 @@
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8U-rS-xFm">
                         <rect key="frame" x="120" y="323" width="13" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="X" id="dxY-jh-Ems">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Y" id="dxY-jh-Ems">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PI8-vy-F8F">
-                        <rect key="frame" x="159" y="338" width="19" height="27"/>
+                        <rect key="frame" x="160" y="338" width="19" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="VDA-gS-1KW"/>
                     </stepper>
@@ -759,12 +762,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="QM2-RF-DTd"/>
                     </stepper>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V3i-Rb-Mf0">
-                        <rect key="frame" x="218" y="40" width="525" height="323"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
                 </subviews>
             </view>
+            <connections>
+                <outlet property="txt_h" destination="8IJ-lk-2im" id="AKd-dC-mnD"/>
+                <outlet property="txt_w" destination="IqP-8y-Phq" id="67r-hA-fas"/>
+                <outlet property="txt_x" destination="XDZ-fN-zPn" id="KG9-U1-Xta"/>
+                <outlet property="txt_y" destination="dso-5e-1eZ" id="X2P-2I-38i"/>
+            </connections>
         </window>
         <customObject id="494" customClass="AppDelegate">
             <connections>

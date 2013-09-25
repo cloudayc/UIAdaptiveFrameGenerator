@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293CE05F17F28A7D00BA1CDF /* AdapterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 293CE05E17F28A7D00BA1CDF /* AdapterView.m */; };
+		293CE06217F2A44600BA1CDF /* AdapterWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 293CE06117F2A44600BA1CDF /* AdapterWindow.m */; };
+		299410A017EFECDF00237B7B /* SubviewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994109F17EFECDF00237B7B /* SubviewObject.m */; };
 		7798DDCD17EBF99100CAA00B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7798DDCC17EBF99100CAA00B /* Cocoa.framework */; };
 		7798DDD717EBF99100CAA00B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7798DDD517EBF99100CAA00B /* InfoPlist.strings */; };
 		7798DDD917EBF99100CAA00B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7798DDD817EBF99100CAA00B /* main.m */; };
@@ -31,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		293CE05D17F28A7D00BA1CDF /* AdapterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdapterView.h; sourceTree = "<group>"; };
+		293CE05E17F28A7D00BA1CDF /* AdapterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdapterView.m; sourceTree = "<group>"; };
+		293CE06017F2A44600BA1CDF /* AdapterWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdapterWindow.h; sourceTree = "<group>"; };
+		293CE06117F2A44600BA1CDF /* AdapterWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdapterWindow.m; sourceTree = "<group>"; };
+		2994109E17EFECDF00237B7B /* SubviewObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubviewObject.h; sourceTree = "<group>"; };
+		2994109F17EFECDF00237B7B /* SubviewObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubviewObject.m; sourceTree = "<group>"; };
 		7798DDC917EBF99100CAA00B /* UIAdaptiveFrameGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIAdaptiveFrameGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7798DDCC17EBF99100CAA00B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7798DDCF17EBF99100CAA00B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -73,9 +82,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		293CE06317F2DC0E00BA1CDF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		294D42F217EEE10B007DDCB5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2994109E17EFECDF00237B7B /* SubviewObject.h */,
+				2994109F17EFECDF00237B7B /* SubviewObject.m */,
+				293CE05D17F28A7D00BA1CDF /* AdapterView.h */,
+				293CE05E17F28A7D00BA1CDF /* AdapterView.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +146,9 @@
 				7798DDDF17EBF99100CAA00B /* AppDelegate.m */,
 				7798DDE117EBF99100CAA00B /* MainMenu.xib */,
 				7798DDE417EBF99100CAA00B /* Images.xcassets */,
+				293CE06017F2A44600BA1CDF /* AdapterWindow.h */,
+				293CE06117F2A44600BA1CDF /* AdapterWindow.m */,
+				293CE06317F2DC0E00BA1CDF /* Utilities */,
 				294D42F217EEE10B007DDCB5 /* Model */,
 				7798DDD317EBF99100CAA00B /* Supporting Files */,
 			);
@@ -260,7 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				293CE05F17F28A7D00BA1CDF /* AdapterView.m in Sources */,
+				293CE06217F2A44600BA1CDF /* AdapterWindow.m in Sources */,
 				7798DDE017EBF99100CAA00B /* AppDelegate.m in Sources */,
+				299410A017EFECDF00237B7B /* SubviewObject.m in Sources */,
 				7798DDD917EBF99100CAA00B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

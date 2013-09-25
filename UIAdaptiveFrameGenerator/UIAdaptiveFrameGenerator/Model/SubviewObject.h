@@ -8,6 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+    subviewView,
+    subviewImage,
+    subviewLabel
+}enum_Subview;
+
 @interface SubviewObject : NSObject
+
+@property (nonatomic, strong) NSView *view;
+@property (nonatomic, assign) enum_Subview subviewType;
+
+@property (nonatomic, strong) NSView *superView;
+
+- (void)initWithFrame:(CGRect)frame subviewType:(enum_Subview)type;
 
 @end
