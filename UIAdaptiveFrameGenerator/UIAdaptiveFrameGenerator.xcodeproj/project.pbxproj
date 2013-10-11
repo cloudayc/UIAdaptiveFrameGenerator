@@ -10,6 +10,7 @@
 		293CE05F17F28A7D00BA1CDF /* AdapterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 293CE05E17F28A7D00BA1CDF /* AdapterView.m */; };
 		293CE06217F2A44600BA1CDF /* AdapterWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 293CE06117F2A44600BA1CDF /* AdapterWindow.m */; };
 		293CE06617F2DCD000BA1CDF /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 293CE06517F2DCD000BA1CDF /* Utility.m */; };
+		294E15AC1806C05E00C11449 /* DisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 294E15AB1806C05E00C11449 /* DisplayView.m */; };
 		299410A017EFECDF00237B7B /* SubviewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994109F17EFECDF00237B7B /* SubviewObject.m */; };
 		7798DDCD17EBF99100CAA00B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7798DDCC17EBF99100CAA00B /* Cocoa.framework */; };
 		7798DDD717EBF99100CAA00B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7798DDD517EBF99100CAA00B /* InfoPlist.strings */; };
@@ -41,6 +42,8 @@
 		293CE06117F2A44600BA1CDF /* AdapterWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdapterWindow.m; sourceTree = "<group>"; };
 		293CE06417F2DCD000BA1CDF /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		293CE06517F2DCD000BA1CDF /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		294E15AA1806C05E00C11449 /* DisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayView.h; sourceTree = "<group>"; };
+		294E15AB1806C05E00C11449 /* DisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayView.m; sourceTree = "<group>"; };
 		2994109E17EFECDF00237B7B /* SubviewObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubviewObject.h; sourceTree = "<group>"; };
 		2994109F17EFECDF00237B7B /* SubviewObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubviewObject.m; sourceTree = "<group>"; };
 		7798DDC917EBF99100CAA00B /* UIAdaptiveFrameGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIAdaptiveFrameGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +104,8 @@
 				2994109F17EFECDF00237B7B /* SubviewObject.m */,
 				293CE05D17F28A7D00BA1CDF /* AdapterView.h */,
 				293CE05E17F28A7D00BA1CDF /* AdapterView.m */,
+				294E15AA1806C05E00C11449 /* DisplayView.h */,
+				294E15AB1806C05E00C11449 /* DisplayView.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294E15AC1806C05E00C11449 /* DisplayView.m in Sources */,
 				293CE05F17F28A7D00BA1CDF /* AdapterView.m in Sources */,
 				293CE06217F2A44600BA1CDF /* AdapterWindow.m in Sources */,
 				7798DDE017EBF99100CAA00B /* AppDelegate.m in Sources */,

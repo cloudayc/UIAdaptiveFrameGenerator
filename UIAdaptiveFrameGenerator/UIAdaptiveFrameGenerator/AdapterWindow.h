@@ -24,5 +24,6 @@
 
 - (IBAction)addAdaptiveRootView:(id)sender;
 
+- (IBAction)addDisplayView:(id)sender;
 
 @end

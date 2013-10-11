@@ -9,6 +9,7 @@
 #import "AdapterWindow.h"
 #import "AdapterView.h"
 #import "Utility.h"
+#import "DisplayView.h"
 
 @implementation AdapterWindow
 
@@ -57,12 +58,12 @@
     }
 }
 
-- (IBAction)addSubView:(id)sender
+- (IBAction)addDisplayView:(id)sender
 {
     for (AdapterView *screen in _screens)
     {
-        
-        [screen]
+        DisplayView *view = [[DisplayView alloc] initWithFrame:NSMakeRect(0, 0, 100, 100)];
+        [screen addSubview:view];
     }
 }
 
@@ -73,6 +74,11 @@
 //    NSRect frame = NSMakeRect(drawPoint.x + n, drawPoint.y + wSize.height - n, 50, 50);
 //    [self addAdaptiveView:frame];
     n += 30;
+}
+
+-(void)mouseDown:(NSEvent *)pTheEvent
+{
+    NSLog(@"%s", __func__);
 }
 
 - (void)addAdaptiveView:(CGRect)frame

@@ -648,12 +648,12 @@
             </items>
         </menu>
         <window title="UIAdaptiveFrameGenerator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371" customClass="AdapterWindow">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="268" height="423"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
-            <value key="minSize" type="size" width="260" height="300"/>
-            <value key="maxSize" type="size" width="260" height="300"/>
+            <value key="minSize" type="size" width="260" height="423"/>
+            <value key="maxSize" type="size" width="260" height="423"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="268" height="423"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -778,6 +778,9 @@
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="addDisplayView:" target="371" id="6X5-ca-q2h"/>
+                                            </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kdQ-Q4-ZnH">
                                             <rect key="frame" x="44" y="97" width="121" height="32"/>

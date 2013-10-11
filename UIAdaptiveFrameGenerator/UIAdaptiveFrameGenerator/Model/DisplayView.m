@@ -19,11 +19,65 @@
     return self;
 }
 
+-(void)mouseDown:(NSEvent *)pTheEvent {
+    
+    NSPoint tvarMouseInWindow = [pTheEvent locationInWindow];
+    NSPoint tvarMouseInView   = [self convertPoint:tvarMouseInWindow
+                                          fromView:nil];
+    
+    NSLog(@"window: %f %f", tvarMouseInWindow.x, tvarMouseInWindow.y);
+    NSLog(@"view: %f %f", tvarMouseInView.x, tvarMouseInView.y);
+    NSSize zDragOffset = NSMakeSize(0.0, 0.0);
+    NSPasteboard *zPasteBoard;
+    
+//    zPasteBoard = [NSPasteboard pasteboardWithName:NSDragPboard];
+//    [zPasteBoard declareTypes:[NSArray arrayWithObject:NSTIFFPboardType]
+//                        owner:self];
+//    [zPasteBoard setData:[self.nsImageObj TIFFRepresentation]
+//                 forType:NSTIFFPboardType];
+//    
+//    [self dragImage:self.nsImageObj
+//                 at:tvarMouseInView
+//             offset:zDragOffset
+//              event:pTheEvent
+//         pasteboard:zPasteBoard
+//             source:self
+//          slideBack:YES];
+    
+    
+}
+- (void)mouseMoved:(NSEvent *)theEvent
+{
+    NSLog(@"%s", __func__);
+}
+
+- (void)mouseEntered:(NSEvent *)theEvent
+{
+    NSLog(@"%s", __func__);
+}
+
+- (void)mouseExited:(NSEvent *)theEvent
+{
+    NSLog(@"%s", __func__);
+}
+
+
+-(void)mouseDragged:(NSEvent *)pTheEvent {
+   [self setNeedsDisplay:YES];
+}
+
+
 - (void)drawRect:(NSRect)dirtyRect
 {
 	[super drawRect:dirtyRect];
-	
-    // Drawing code here.
-}
 
+    CGFloat r = arc4random() % 255 / 255.0;
+    CGFloat g = arc4random() % 255 / 255.0;
+    CGFloat b = arc4random() % 255 / 255.0;
+    [[NSColor colorWithCalibratedRed:r green:g blue:b alpha:0.6f] setFill];
+
+    NSRectFill(dirtyRect);
+    [NSBezierPath fillRect:dirtyRect];
+ 
+}
 @end

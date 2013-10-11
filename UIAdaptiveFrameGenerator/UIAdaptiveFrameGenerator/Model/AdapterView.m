@@ -93,17 +93,26 @@
         
     }
     
-    //this cant happen ???
     NSLog(@"Error MyNSView performDragOperation");
     return NO;
     
-} // end performDragOperation
+}
 
 
 - (void)concludeDragOperation:(id )sender {
     [self setNeedsDisplay:YES];
-} // end concludeDragOperation
+}
 
+
+- (void)moveDisplayView
+{
+    for (AdapterView *v in self.subviews)
+    {
+        NSRect frame = v.frame;
+        frame.origin.x += 2;
+        [v setFrame:frame];
+    }
+}
 
 
 - (void)drawRect:(NSRect)dirtyRect {
@@ -122,19 +131,5 @@
                     fraction:1.f];
 }
 
-//- (void)drawRect:(NSRect)dirtyRect
-//{
-//	[super drawRect:dirtyRect];
-//    
-//    CGFloat r = arc4random() % 255 / 255.0;
-//    CGFloat g = arc4random() % 255 / 255.0;
-//    CGFloat b = arc4random() % 255 / 255.0;
-//    [[NSColor colorWithCalibratedRed:r green:g blue:b alpha:0.6f] setFill];
-//    
-//    NSRectFill(dirtyRect);
-//    [NSBezierPath fillRect:dirtyRect];
-//    
-//    // Drawing code here.
-//}
 
 @end
