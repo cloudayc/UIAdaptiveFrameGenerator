@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 @interface Utility : NSObject
+
+
++(CGRect)AFGRectMake:(CGFloat)x y:(CGFloat)y width:(CGFloat)w height:(CGFloat)h;
 
 @end

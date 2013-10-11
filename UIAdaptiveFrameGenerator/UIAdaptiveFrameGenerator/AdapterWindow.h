@@ -10,11 +10,17 @@
 
 @interface AdapterWindow : NSWindow
 {
+    IBOutlet NSTabView *menuView;
+    
     IBOutlet NSTextField *txt_x;
     IBOutlet NSTextField *txt_y;
     IBOutlet NSTextField *txt_w;
     IBOutlet NSTextField *txt_h;
+    
+    NSMutableArray *_screens;
 }
+
+- (IBAction)addScreen:(id)sender;
 
 - (IBAction)addAdaptiveRootView:(id)sender;
 
