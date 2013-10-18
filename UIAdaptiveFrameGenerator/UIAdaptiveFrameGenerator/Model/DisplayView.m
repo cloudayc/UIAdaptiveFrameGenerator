@@ -7,6 +7,13 @@
 //
 
 #import "DisplayView.h"
+#import "Utility.h"
+
+@interface DisplayView()
+{
+    NSPoint _relativePoint;
+}
+@end
 
 @implementation DisplayView
 
@@ -24,6 +31,7 @@
     NSPoint tvarMouseInWindow = [pTheEvent locationInWindow];
     NSPoint tvarMouseInView   = [self convertPoint:tvarMouseInWindow
                                           fromView:nil];
+    _relativePoint = tvarMouseInView;
     
     NSLog(@"window: %f %f", tvarMouseInWindow.x, tvarMouseInWindow.y);
     NSLog(@"view: %f %f", tvarMouseInView.x, tvarMouseInView.y);
@@ -63,7 +71,13 @@
 
 
 -(void)mouseDragged:(NSEvent *)pTheEvent {
-   [self setNeedsDisplay:YES];
+    NSPoint winPoint = [pTheEvent locationInWindow];
+    NSPoint superPoint = [[self superview] convertPoint:winPoint fromView:nil];
+    superPoint.x -= _relativePoint.x;
+    superPoint.y -= _relativePoint.y;
+    [self setFrameOrigin:superPoint];
+    [Utility sharedUtility].currentOpViewOrigin = superPoint;
+    [self setNeedsDisplay:YES];
 }
 
 

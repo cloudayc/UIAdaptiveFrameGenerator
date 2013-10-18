@@ -32,8 +32,7 @@
         
         return NSDragOperationGeneric;
         
-    }
-    
+    }    
     // not a drag we can use
     return NSDragOperationNone;
     
@@ -43,7 +42,7 @@
     return YES;
 }
 
-- (BOOL)performDragOperation:(id )sender {
+- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
     NSPasteboard *zPasteboard = [sender draggingPasteboard];
     // define the images  types we accept
     // NSPasteboardTypeTIFF: (used to be NSTIFFPboardType).
@@ -98,6 +97,10 @@
     
 }
 
+
+-(void)mouseDragged:(NSEvent *)pTheEvent {
+    [self setNeedsDisplay:YES];
+}
 
 - (void)concludeDragOperation:(id )sender {
     [self setNeedsDisplay:YES];

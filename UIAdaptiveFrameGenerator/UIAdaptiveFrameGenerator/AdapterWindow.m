@@ -15,7 +15,17 @@
 
 - (void)awakeFromNib
 {
+    [[Utility sharedUtility] addObserver:self
+                              forKeyPath:@"currentOpViewOrigin"
+                                 options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                                 context:nil];
+    [[Utility sharedUtility] addObserver:self
+                              forKeyPath:@"currentOpViewSize"
+                                 options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                                 context:nil];
+    
     _screens = [NSMutableArray array];
+    [self addScreen:nil];
 }
 
 - (IBAction)addScreen:(id)sender
@@ -85,6 +95,25 @@
 {
     AdapterView *subview = [[AdapterView alloc] initWithFrame:frame];
     [self.contentView addSubview:subview];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    Utility *utility = (Utility *)object;
+    if ([keyPath isEqualToString:@"currentOpViewOrigin"])
+    {
+        [txt_x setStringValue:[NSString stringWithFormat:@"%.2f", utility.currentOpViewOrigin.x]];
+        [txt_y setStringValue:[NSString stringWithFormat:@"%.2f", utility.currentOpViewOrigin.y]];
+    }
+    else if ([keyPath isEqualToString:@"currentOpViewSize"])
+    {
+        [txt_w setStringValue:[NSString stringWithFormat:@"%.2f", utility.currentOpViewSize.width]];
+        [txt_h setStringValue:[NSString stringWithFormat:@"%.2f", utility.currentOpViewSize.height]];
+    }
+//    NSLog(@"%@\n%@\n%@\n%@\n\n", keyPath, object, change, context);
 }
 
 @end

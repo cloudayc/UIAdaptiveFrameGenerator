@@ -12,6 +12,16 @@
 
 @implementation Utility
 
++ (Utility *)sharedUtility
+{
+    static Utility *instace = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instace = [[Utility alloc] init];
+    });
+    return instace;
+}
+
 +(CGRect)AFGRectMake:(CGFloat)x y:(CGFloat)y width:(CGFloat)w height:(CGFloat)h
 {
     AppDelegate *delegate = [NSApplication sharedApplication].delegate;

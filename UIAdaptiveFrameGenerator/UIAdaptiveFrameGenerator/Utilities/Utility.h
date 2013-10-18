@@ -12,6 +12,12 @@
 
 @interface Utility : NSObject
 
+@property (nonatomic) NSPoint currentOpViewOrigin;
+@property (nonatomic) NSSize currentOpViewSize;
+@property (nonatomic) NSRect currentOpViewRect;
+
++ (Utility *)sharedUtility;
+
 
 +(CGRect)AFGRectMake:(CGFloat)x y:(CGFloat)y width:(CGFloat)w height:(CGFloat)h;
 
