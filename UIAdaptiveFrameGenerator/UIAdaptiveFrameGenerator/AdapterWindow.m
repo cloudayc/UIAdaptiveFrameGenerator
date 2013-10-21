@@ -91,6 +91,11 @@
     NSLog(@"%s", __func__);
 }
 
+- (void)mouseEntered:(NSEvent *)theEvent
+{
+    NSLog(@"%s", __func__);
+}
+
 - (void)addAdaptiveView:(CGRect)frame
 {
     AdapterView *subview = [[AdapterView alloc] initWithFrame:frame];
